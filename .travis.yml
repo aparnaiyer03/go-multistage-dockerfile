@@ -1,5 +1,10 @@
 1 language: node_js
 2 node_js:
 3 - "stable"
-4 script: gulp travis
+4 env:
+5 - NODE_ENV="development"
+6 - NODE_ENV="production" ;SESSION_SECRET ="la li"
+7 services:
+8 - mongodb
+9 script: gulp travis
 
