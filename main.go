@@ -38,7 +38,7 @@ func reader(conn *websocket.Conn) {
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Home Page")
+    fmt.Fprintf(w, "Home Page function from D1")
 }
 
 func wsEndpoint(w http.ResponseWriter, r *http.Request) {
@@ -62,7 +62,7 @@ func setupRoutes() {
 }
 
 func main() {
-    fmt.Println("Hello World")
+    fmt.Println("Hello World from main function in D1")
     setupRoutes()
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
